@@ -1,5 +1,5 @@
 <template>
-  <button v-on:click="onClick()" :style="{background: color}" class="btn"> {{ text }}</button>
+  <button @click="onClick()" :style="{background: color}" class="btn"> {{ text }}</button>
 </template>
 
 <script>
@@ -11,7 +11,7 @@
     },
     methods:{
       onClick(){
-        console.log(this.text)
+        this.$emit("btn-click")
       }
     }
   }
